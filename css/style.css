@@ -39,6 +39,10 @@ nav ul li a {
     color: #000000
 }
 
+nav ul li a:hover {
+    border-bottom: 2px solid #fbc531;
+}
+
 .main {
     display: flex;
     width: 100%;
@@ -153,8 +157,13 @@ nav ul li a {
 }
 
 .products .product {
+    transition: transform 0.5s;
     margin-bottom: 50px;
     cursor: pointer;
+}
+
+.products .product:hover {
+    transform: translateY(-5px);
 }
 
 .products .row .product h4 {
@@ -242,6 +251,10 @@ nav ul li a {
     cursor: pointer;
 }
 
+.reviews .review:hover {
+    box-shadow: none;
+}
+
 .reviews .review i.fa-quote-left {
     color: #fbc531;
     font-size: 30px;
@@ -316,4 +329,93 @@ nav ul li a {
     text-align: center;
     margin: 10px;
     color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar .menu-icon {
+        display: none;
+        width: 28px;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    .main {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .column {
+        margin: 25px;
+    }
+
+    .column h1 {
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+
+    .column img {
+        height: 250px;
+        width: 350px;
+    }
+
+    .button {
+        margin-top: 30px;
+    }
+
+    .categories .row {
+        flex-direction: column;
+    }
+
+    .categories .row p {
+        margin-bottom: 40px;
+    }
+
+    .offer .offer-container {
+        flex-direction: column;
+        margin-top: 60px;
+        margin-left: 35px;
+        margin-right: 25px;
+    }
+
+    .offer .offer-container .offer-image img {
+        margin-bottom: 60px;
+    }
+
+    .offer .offer-container #offer-button {
+        display: block;
+        width: 175px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .reviews .row {
+        flex-direction: column;
+        margin: 0 40px;
+    }
+
+    .reviews .review {
+        margin-bottom: 50px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 10px 25px;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
 }
