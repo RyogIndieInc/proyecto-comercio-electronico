@@ -169,3 +169,13 @@ nav ul li a {
 .rating i {
     color: #fbc531;
 }
+
+.products .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 75px;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 15px;
+}
